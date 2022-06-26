@@ -51,7 +51,13 @@ const config = {
     plugins: {
       legend: false,
       decimation: decimation,
+      tooltip: {
+        enabled: false,
+      },
       zoom: {
+        pan: {
+          enabled: true,
+        },
         zoom: {
           wheel: {
             enabled: true,
@@ -59,10 +65,6 @@ const config = {
           pinch: {
             enabled: true,
           },
-          drag: {
-            enabled: true,
-          },
-
           mode: "xy",
         },
       },
