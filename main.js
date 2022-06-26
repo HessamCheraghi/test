@@ -1,6 +1,8 @@
 import Chart from "chart.js/auto";
 import { CHART_COLORS } from "./utils";
 
+import zoomPlugin from "chartjs-plugin-zoom";
+Chart.register(zoomPlugin);
 ///////////////////////////////////////
 // setups
 const numberOfData = (31 * 24 * 3600) / 10;
@@ -49,6 +51,21 @@ const config = {
     plugins: {
       legend: false,
       decimation: decimation,
+      zoom: {
+        zoom: {
+          wheel: {
+            enabled: true,
+          },
+          pinch: {
+            enabled: true,
+          },
+          drag: {
+            enabled: true,
+          },
+
+          mode: "xy",
+        },
+      },
     },
     scales: {
       x: {
@@ -58,6 +75,7 @@ const config = {
   },
 };
 ////////////////////////////////////////
+
 const myChart = new Chart(document.querySelector("#myChart"), config);
 
 const form = document.querySelector("form");
@@ -70,4 +88,9 @@ form.addEventListener("change", (e) => {
   decimation.enabled = onOff.checked;
   decimation.samples = +typeOfDecimation.value;
   myChart.update();
+});
+const resetZoom = document.querySelector("#btn");
+
+resetZoom.addEventListener("click", (e) => {
+  myChart.resetZoom();
 });

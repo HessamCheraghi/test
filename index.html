@@ -13,7 +13,8 @@
     <title>Document</title>
     <style>
       body,
-      select {
+      select,
+      button {
         font-family: "Vazirmatn", sans-serif;
         font-size: 1rem;
       }
@@ -25,6 +26,12 @@
         #chart-container {
           padding-inline: 0;
         }
+      }
+      #btn {
+        border: none;
+        padding: 0.5rem 1.5rem;
+        background-color: skyblue;
+        border-radius: 3px;
       }
     </style>
     <script src="main.js" type="module"></script>
@@ -41,7 +48,7 @@
         <option value="44640">دقیقه</option>
       </select>
     </form>
-
+    <button type="button" id="btn">ریست کردن زوم</button>
     <div id="chart-container">
       <canvas id="myChart"></canvas>
     </div>

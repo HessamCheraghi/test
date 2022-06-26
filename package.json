@@ -2,7 +2,6 @@
   "name": "chart-practice",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "source": "./index.html",
   "homepage": ".",
   "browserslist": "> 0.5%, last 2 versions, not dead",
@@ -20,6 +19,7 @@
     "@kurkle/color": "^0.2.1",
     "chart.js": "^3.8.0",
     "chartjs-adapter-luxon": "^1.1.0",
+    "chartjs-plugin-zoom": "^1.2.1",
     "gh-pages": "^4.0.0",
     "luxon": "^2.4.0"
   },
