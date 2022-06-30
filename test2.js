@@ -4,13 +4,11 @@ import zoomPlugin from "chartjs-plugin-zoom";
 Chart.register(zoomPlugin);
 
 const numberOfData = (31 * 24 * 3600) / 10;
-const startDate = 1656573712206;
 const datum = [];
 let prev = 100;
 for (let i = 0; i < numberOfData; i++) {
   prev += 5 - Math.random() * 10;
-  const time = startDate + 10000 * i;
-  datum.push({ x: time, y: prev });
+  datum.push({ x: Utils.newDate(i), y: prev });
 }
 
 const data = {
@@ -36,13 +34,13 @@ const config = {
   type: "line",
   data: data,
   options: {
-    parsing: false,
+    // parsing: false,
     spanGaps: true,
     animation: false,
     responsive: true,
     interaction: {
       intersect: false,
-      mode: "nearest",
+      // mode: "nearest",
     },
     plugins: {
       decimation: decimation,
