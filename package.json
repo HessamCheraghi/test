@@ -21,7 +21,8 @@
     "chartjs-adapter-luxon": "^1.1.0",
     "chartjs-plugin-zoom": "^1.2.1",
     "gh-pages": "^4.0.0",
-    "luxon": "^2.4.0"
+    "luxon": "^2.4.0",
+    "xlsx": "https://cdn.sheetjs.com/xlsx-0.18.9/xlsx-0.18.9.tgz"
   },
   "devDependencies": {
     "parcel": "^2.6.2"
